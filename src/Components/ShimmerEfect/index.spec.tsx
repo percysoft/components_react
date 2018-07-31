@@ -11,3 +11,16 @@ describe('Shimmer component', () => {
     });
   });
 });
+
+describe('Shimmer component', () => {
+  describe('Render snapshot with propertys', () => {
+    test('Render correctly', () => {
+      const wrapper = mount(
+        <ShimmerEffect
+          width= "500px"
+          heigth= "40px"
+        />);
+      expect(wrapper.html()).toMatchSnapshot();
+    });
+  });
+});

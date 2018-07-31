@@ -4,7 +4,7 @@ import { Shimmer } from './index.style';
 interface IShimmerProps {
   width?: string;
   heigth?: string;
-  radius?: boolean;
+  radius?: string;
 }
 
 export class ShimmerEffect extends React.Component<IShimmerProps, any> {
