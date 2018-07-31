@@ -23,6 +23,15 @@ module.exports = {
   },
   module: {
     rules: [
+        {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+          },
+        ],
+      },
       {
         test: /\.scss$/,
         use: [
@@ -32,15 +41,6 @@ module.exports = {
           },
           {
             loader: 'sass-loader',
-          },
-        ],
-      },
-      {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
           },
         ],
       },
@@ -57,18 +57,7 @@ module.exports = {
         test: /.json$/,
         use: 'json-loader'
       },
-    ],
-    loaders: [
-      {
-          test: /.tsx?$/,
-          loader: 'awesome-typescript-loader',
-          exclude: /node_modules/,
-      }, {
-          test: /.js$/,
-          loader: 'source-map-loader',
-          enforce: 'pre',
-      }
-  ]
+    ]
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),

@@ -1,17 +1,9 @@
 {
 	"presets": [
-    ["env", { "modules": false }],
-    "es2015",
+		["env", { "modules": false }],
 		"react"
 	],
 	"plugins": [
 		"react-hot-loader/babel"
-  ],
-  "jest": {
-    "globals": {
-      "ts-jest": {
-        "useBabelrc": true
-      }
-    }
-  }
+	]
 }
