@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { ShimmerEffect } from '../Components/ShimmerEfect';
 
 export class App extends React.Component<{}, {}> {
 
@@ -9,7 +10,10 @@ export class App extends React.Component<{}, {}> {
   render() {
     return(
       <React.Fragment>
-        <h1>hola juanca</h1>
+        <ShimmerEffect
+          width= "500px"
+          heigth= "40px"
+        />
       </React.Fragment>
     );
   }

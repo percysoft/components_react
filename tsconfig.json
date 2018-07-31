@@ -16,5 +16,13 @@
   ],
   "awesomeTypescriptLoaderOptions": {
     "transpileOnly": true,
-  }
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "my-tsconfig.json"
+      }
+    },
+  },
+  "exclude": ["node_modules", "**/*.spec.tsx"]
 }
