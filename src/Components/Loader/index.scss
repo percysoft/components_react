@@ -1,0 +1,34 @@
+.b-loader {
+  align-items: center;
+  display: inline-flex;
+  height: 100%;
+  justify-content: center;
+  margin: 0 auto;
+}
+.b-loader_spinner {
+  height: 100%;
+  width: 100%;
+  background: white;
+}
+.b-loader_spinner__rect {
+  animation: 1.6s linear -0.2s infinite reverse none running spin;
+  transform-origin: 60px 60px 0;
+}
+
+.b-loader_spinner__circle  {
+  animation: 1.6s linear 0s infinite normal none running spin;
+  transform-origin: 60px 60px 0;
+}
+
+.b-loader_spinner-svg {
+  height: 100%;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

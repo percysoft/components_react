@@ -1,12 +1,15 @@
 module.exports = {
   setupFiles: ["./jest.setup.js","jest-localstorage-mock"],
   snapshotSerializers: ["enzyme-to-json/serializer"],
-   transform: {
+  transform: {
        "^.+\\.tsx?$": "ts-jest"
-   },
-   testMatch: [
+  },
+  testMatch: [
      '**/src/**.(test|spec).(jsx|tsx|js|ts)'
-   ],
+  ],
+  moduleNameMapper: {
+    "^.+\\.(css|less|scss)$": "identity-obj-proxy"
+  },
    moduleFileExtensions: [
     "ts",
     "tsx",

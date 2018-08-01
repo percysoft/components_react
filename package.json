@@ -10,6 +10,28 @@
     "prod": "webpack -p",
     "test": "jest"
   },
+  "jest": {
+    "moduleFileExtensions": [
+      "",
+      "js",
+      "json"
+    ],
+    "modulePaths": [
+      "./src"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "testRegex": "/.*\\-snapshot\\.js$",
+    "moduleNameMapper": {
+      "^testUtils": "./src/utils/tests.js",
+      "^.+\\.(s?css|less)$": "./src/utils/styleMock.js",
+      "^.+\\.(gif|ttf|eot|svg)$": "./src/utils/fileMock.js"
+    },
+    "setupFiles": [
+      "./src/utils/setupJest.js"
+    ]
+  },
   "author": "Victor Tataje <percytataje@gmail.com>",
   "license": "MIT",
   "devDependencies": {
@@ -27,6 +49,7 @@
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.4",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^22.4.4",
     "jest-junit": "^4.0.0",
     "jest-localstorage-mock": "^2.2.0",
